@@ -13,6 +13,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="bn">
       <body>
+        {/* Pre-paint theme: apply the stored theme before first render so the
+            page never flashes the wrong mode. Default is dark. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('voicehub-theme');if(t!=='light')document.documentElement.classList.add('dark');}catch(e){document.documentElement.classList.add('dark');}})();`,
+          }}
+        />
         <Header />
         <main>{children}</main>
         <Footer />

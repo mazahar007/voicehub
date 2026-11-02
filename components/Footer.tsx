@@ -1,17 +1,20 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { useTheme } from "./useTheme";
 
 export default function Footer() {
   const pathname = usePathname() || "";
   const en = pathname.startsWith("/en");
+  const { theme } = useTheme();
+  const dark = theme === "dark";
 
   return (
-    <footer className="border-t border-[#1e3a5f] bg-[#0b1220]">
-      <div className="wrap py-8 text-slate-400 text-[15px]">
+    <footer className={`border-t ${dark ? "border-[#1e3a5f] bg-[#0b1220]" : "border-slate-200 bg-white"}`}>
+      <div className={`wrap py-8 text-[15px] ${dark ? "text-slate-400" : "text-slate-600"}`}>
         {en ? (
           <>
-            <p className="font-bold text-white">Voice Studio — Voice SaaS V1</p>
+            <p className={`font-bold ${dark ? "text-white" : "text-slate-900"}`}>Voice Studio — Voice SaaS V1</p>
             <p>
               Voice engine: ElevenLabs API. No official partnership with or
               endorsement by ElevenLabs is claimed.
@@ -28,7 +31,7 @@ export default function Footer() {
           </>
         ) : (
           <>
-            <p className="font-bold text-white">ভয়েস স্টুডিও — Voice SaaS V1</p>
+            <p className={`font-bold ${dark ? "text-white" : "text-slate-900"}`}>ভয়েস স্টুডিও — Voice SaaS V1</p>
             <p>
               ভয়েস ইঞ্জিন: ElevenLabs API। ElevenLabs-এর সাথে কোনো অফিসিয়াল
               পার্টনারশিপ বা অনুমোদন দাবি করা হয় না।

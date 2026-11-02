@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+/* Class-based dark mode (Tailwind v4): the `dark` class on <html> comes from
+   the theme toggle (components/useTheme.ts), default dark, stored in
+   localStorage as voicehub-theme. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light-mode fix for the outline-white button (used for the secondary hero
+   CTA): on a light page it becomes a white button with a grey border. */
+html:not(.dark) .btn-outline-white { background: #fff; border-color: #cbd5e1; color: #0f172a; }
+
+/* Dark-mode overrides for the light-built pages (/app, /pricing, /login,
+   /admin), whose shared .card / .input / .chip styles are light by default. */
+html.dark body { background: #0a0e1a; color: #e2e8f0; }
+html.dark .card { background: #0f1626; border-color: rgba(255, 255, 255, 0.1); color: #e2e8f0; }
+html.dark .input { background: #1e293b; border-color: rgba(255, 255, 255, 0.15); color: #fff; }
+html.dark .chip { background: #1e293b; color: #cbd5e1; }
+html.dark .btn { background: #1e293b; border-color: rgba(255, 255, 255, 0.15); color: #fff; }
+html.dark .text-slate-600 { color: #94a3b8; }
+html.dark .text-slate-700 { color: #cbd5e1; }
+
 /* Voice SaaS V1 — premium-corporate, deep navy #0B1220 + sky accent #0284C7.
    Bengali-first UI. Rounded cards, hover lift only, no busy animation. */
 * { box-sizing: border-box; }
