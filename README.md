@@ -6,4 +6,5 @@ Bengali and English AI voice SaaS powered by ElevenLabs API.
 - Credit system and draft pricing
 - Server-side ElevenLabs proxy only (API key in env, never in frontend)
 
+Vercel project: yourvoice
 See README-SETUP-BN.md for setup in Bengali.
