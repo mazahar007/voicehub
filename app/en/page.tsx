@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Voice Studio — Bengali and English AI Voice",
+  description:
+    "Type text, hear it in a natural AI voice and download the MP3. Bengali and English text-to-speech, voice library and credit ledger.",
+};
 
 // English landing — same Zilaseba-style design as the Bengali home page,
 // translated faithfully. Same prices, features, FAQ and honest limits;
@@ -183,6 +190,38 @@ export default function EnglishHome() {
         </div>
       </section>
 
+      {/* Safety */}
+      <section className="wrap pb-[50px]">
+        <div className="grid lg:grid-cols-5 gap-6">
+          <div className="lg:col-span-3">
+            <p className="text-cyan-300 text-sm font-extrabold">SAFETY</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-2">
+              Your text,
+              <br />
+              <span className="bg-gradient-to-r from-sky-400 to-teal-300 bg-clip-text text-transparent">under your control</span>
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-4 mt-8">
+              {[
+                { t: "Text is never stored", d: "Only numbers and counts are kept on the server, never the text." },
+                { t: "Server-side key", d: "The key never reaches the browser and is never logged." },
+                { t: "No fake audio", d: "Without a key, the studio says so clearly." },
+                { t: "Cloning needs consent", d: "Only with the voice owner's written permission." },
+              ].map((f) => (
+                <div key={f.t} className="rounded-3xl border border-white/10 bg-[#0f1626] p-5">
+                  <h3 className="font-extrabold text-white">{f.t}</h3>
+                  <p className="text-slate-400 text-[15px] mt-1">{f.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="lg:col-span-2 rounded-3xl border border-white/10 bg-gradient-to-b from-blue-900 to-[#0f172a] p-6">
+            <h3 className="font-extrabold text-white text-xl">Voice cloning on paid plans</h3>
+            <p className="text-slate-300 mt-3">Voice cloning is not in V1 — coming only on paid plans, and only with the voice owner&apos;s written permission.</p>
+            <p className="mt-5"><span className="inline-block rounded-xl bg-white text-slate-900 px-4 py-2 font-extrabold">Coming soon →</span></p>
+          </div>
+        </div>
+      </section>
+
       <section className="wrap pb-[50px]">
         <div className="rounded-3xl bg-gradient-to-r from-red-600 to-violet-700 p-6 md:p-8 flex flex-wrap gap-4 justify-between items-center">
           <div>
@@ -264,7 +303,7 @@ export default function EnglishHome() {
             generated — no fake audio is ever served.
           </div>
           <div className="text-center mt-8">
-            <Link href="/" className="btn btn-primary">বাংলা সংস্করণ দেখুন →</Link>
+            <Link href="/" className="btn btn-primary">See the Bengali version →</Link>
           </div>
         </div>
       </section>
