@@ -5,8 +5,8 @@ import { DRAFT_PLANS, formatChars } from "@/lib/pricing";
 // section), Bengali version. Style tokens from the zilaseba screenshot:
 // full dark navy-black #0A0E1A, #0F1626 glass cards with white/10 borders,
 // blue → violet → teal gradient headings/buttons, rounded-3xl cards,
-// tinted pill chips. Section gaps are large on purpose: py-20 on mobile
-// (≈84px) and py-32 on desktop (128px), so sections never merge.
+// tinted pill chips. Section gap is exactly 50px between every section
+// (user-set 2026-11-02), so sections stay distinct without merging.
 // Content is VoiceHub's own V1 content only — no zilaseba/10MS branding,
 // copy, images, phone, email, testimonials or app links are copied.
 // Other pages (/app, /pricing, /admin) are untouched.
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className="bg-[#0a0e1a] text-slate-200">
       {/* Hero */}
-      <section className="wrap py-20 md:py-32">
+      <section className="wrap py-[50px]">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-300">
@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* Stats strip */}
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="rounded-3xl border border-white/10 bg-[#0f1626] p-6 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           <div><p className="text-2xl font-extrabold text-white">৫,০০০</p><p className="text-slate-400 text-sm">ক্যারেক্টার পর্যন্ত একবারে</p></div>
           <div><p className="text-2xl font-extrabold text-white">৩টি</p><p className="text-slate-400 text-sm">মডেল: Flash, Multilingual, v3</p></div>
@@ -108,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="text-center">
           <p className="text-cyan-300 text-sm font-extrabold">সুবিধা</p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-2">এক জায়গায় সব ভয়েস সুবিধা</h2>
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* Use cases */}
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <p className="text-cyan-300 text-sm font-extrabold">ব্যবহার</p>
         <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-2">যেকোনো কাজের জন্য ভয়েস</h2>
         <div className="grid md:grid-cols-3 gap-4 mt-8">
@@ -155,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* Safety */}
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="grid lg:grid-cols-5 gap-6">
           <div className="lg:col-span-3">
             <p className="text-cyan-300 text-sm font-extrabold">নিরাপত্তা</p>
@@ -187,7 +187,7 @@ export default function Home() {
       </section>
 
       {/* CTA banner */}
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="rounded-3xl bg-gradient-to-r from-red-600 to-violet-700 p-6 md:p-8 flex flex-wrap gap-4 justify-between items-center">
           <div>
             <h2 className="text-2xl md:text-3xl font-extrabold text-white">ফ্রি ট্রায়াল শুরু করুন আজই</h2>
@@ -198,7 +198,7 @@ export default function Home() {
       </section>
 
       {/* Plans — beautiful section */}
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="text-center">
           <p className="text-cyan-300 text-sm font-extrabold">প্রাইসিং — DRAFT</p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-2">
@@ -257,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="rounded-3xl border border-white/10 bg-[#0f1626] p-6 md:p-8">
           <h2 className="text-3xl font-extrabold text-white">সাধারণ প্রশ্ন</h2>
           <div className="space-y-5 mt-6">

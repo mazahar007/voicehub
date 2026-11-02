@@ -69,7 +69,7 @@ function Wave({ className = "" }: { className?: string }) {
 export default function EnglishHome() {
   return (
     <div className="bg-[#0a0e1a] text-slate-200">
-      <section className="wrap py-20 md:py-32">
+      <section className="wrap py-[50px]">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-300">
@@ -129,7 +129,7 @@ export default function EnglishHome() {
         </div>
       </section>
 
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="rounded-3xl border border-white/10 bg-[#0f1626] p-6 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           <div><p className="text-2xl font-extrabold text-white">5,000</p><p className="text-slate-400 text-sm">characters at once</p></div>
           <div><p className="text-2xl font-extrabold text-white">3</p><p className="text-slate-400 text-sm">models: Flash, Multilingual, v3</p></div>
@@ -138,7 +138,7 @@ export default function EnglishHome() {
         </div>
       </section>
 
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="text-center">
           <p className="text-cyan-300 text-sm font-extrabold">FEATURES</p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-2">Everything in one place</h2>
@@ -166,7 +166,7 @@ export default function EnglishHome() {
         </div>
       </section>
 
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <p className="text-cyan-300 text-sm font-extrabold">USE CASES</p>
         <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-2">A voice for any job</h2>
         <div className="grid md:grid-cols-3 gap-4 mt-8">
@@ -183,7 +183,7 @@ export default function EnglishHome() {
         </div>
       </section>
 
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="rounded-3xl bg-gradient-to-r from-red-600 to-violet-700 p-6 md:p-8 flex flex-wrap gap-4 justify-between items-center">
           <div>
             <h2 className="text-2xl md:text-3xl font-extrabold text-white">Start your free trial today</h2>
@@ -193,7 +193,7 @@ export default function EnglishHome() {
         </div>
       </section>
 
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="text-center">
           <p className="text-cyan-300 text-sm font-extrabold">PRICING — DRAFT</p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-2">
@@ -248,7 +248,7 @@ export default function EnglishHome() {
         </p>
       </section>
 
-      <section className="wrap pb-20 md:pb-32">
+      <section className="wrap pb-[50px]">
         <div className="rounded-3xl border border-white/10 bg-[#0f1626] p-6 md:p-8">
           <h2 className="text-3xl font-extrabold text-white">FAQ</h2>
           <div className="space-y-5 mt-6">
